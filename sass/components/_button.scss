@@ -1,0 +1,51 @@
+//Gestion des boutons
+.bouton{
+    display: inline-block;
+    position:relative;
+    padding:10px;
+    width: 12rem; 
+    height: 4rem; 
+
+    border:none;
+    background: $color-primary;
+    font-family: 'Roboto Slab', serif;
+    color:black;
+    text-align: center;
+
+    &__text{
+        @include centreVH();    
+    }
+}
+
+.boutonAfter1::after{ //Connexion
+    font-family: "Font Awesome 5 Free"; font-weight: 900;color:white;
+    content:'\f2f6';
+    padding-top:0.75rem;
+    display: block;
+    position: absolute;
+    width: 4rem; 
+    height: 4rem;
+    top: 0px; 
+    left: 12rem;
+    background:black;
+}
+
+.boutonAfter2::after{ //Recherche
+    font-family: "Font Awesome 5 Free"; font-weight: 900;color:white;
+    content:'\f002';
+    padding-top:0.75rem;
+    display: block;
+    position: absolute;
+    width: 4rem;
+    height: 4rem; 
+    top: 0px; 
+    left: 12rem;
+    background:black;
+}
+
+.bouton:focus {
+    border-color: #FFFFFF;
+    background-color: black;
+    color: $color-primary; 
+    outline: none;
+}

@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/* réinitialisation */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /*héritage par rapport à body*/ }
+
+html {
+  font-size: 62.5%;
+  /*1 rem égal à 10px maintenant 62.5% = 10px/16px*/ }
+
+body {
+  box-sizing: border-box; }
+
+/*
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Roboto Slab', serif;
+*/
+body {
+  font-family: "arial", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;  */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-invisible {
+  display: none !important; }
+
+.radio-switch {
+  display: inline-block;
+  width: 3.5rem; }
+  .radio-switch__input {
+    display: none;
+    visibility: hidden; }
+  .radio-switch__label {
+    font-size: 1.6rem;
+    cursor: pointer;
+    position: relative; }
+  .radio-switch__button {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid #ffe600;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -.4rem; }
+    .radio-switch__button::after {
+      content: "";
+      display: block;
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffe600;
+      opacity: 0;
+      transition: all .2s; }
+  .radio-switch__input:checked ~ .radio-switch__label .radio-switch__button::after {
+    opacity: 1; }
+
+.bouton {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  width: 12rem;
+  height: 4rem;
+  border: none;
+  background: #ffe600;
+  font-family: 'Roboto Slab', serif;
+  color: black;
+  text-align: center; }
+  .bouton__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.boutonAfter1::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: white;
+  content: '\f2f6';
+  padding-top: 0.75rem;
+  display: block;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  top: 0px;
+  left: 12rem;
+  background: black; }
+
+.boutonAfter2::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: white;
+  content: '\f002';
+  padding-top: 0.75rem;
+  display: block;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  top: 0px;
+  left: 12rem;
+  background: black; }
+
+.bouton:focus {
+  border-color: #FFFFFF;
+  background-color: black;
+  color: #ffe600;
+  outline: none; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + (2 * 6rem)); }

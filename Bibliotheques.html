@@ -6,9 +6,61 @@
 
         <link rel="stylesheet" href="css/icon-style.css">
         <link rel="stylesheet" href="css/style.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
+        <link href="sass/vendors/css/all.css" rel="stylesheet"> <!--load all styles -->
+
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>Bibliothèque CSS</title>
     </head>
+
+    <body>
+        <h1 class="title">
+            Pour les noobs du CSS 
+        </h1>
+
+        <!-- Switch [On - Neutre - Off] -->
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="col-1-of-3">
+                    <div class="radio-switch">
+                        <label for="one" class="radio-switch__label">
+                            <span class="bouton boutonAfter1"><span class="bouton__text">Cas 1</span></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-1-of-3 u-center-text">
+                    <div class="radio-switch">
+                        <input type="radio" id="one" name="threeToggle" value="one" class="radio-switch__input">
+                        <label for="one" class="radio-switch__label">
+                            <span class="radio-switch__button"></span>
+                        </label>
+                    </div>
+                    <div class="radio-switch u-invisible">
+                        <input type="radio" id="two" name="threeToggle" value="two" checked class="radio-switch__input">
+                        <label for="two" class="radio-switch__label">
+                            <span class="radio-switch__button"></span> 
+                        </label>
+                    </div>
+                    <div class="radio-switch">
+                        <input type="radio" id="three" name="threeToggle" value="three" class="radio-switch__input">
+                        <label for="three" class="radio-switch__label">
+                            <span class="radio-switch__button"></span> 
+                        </label>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="radio-switch" onclick="delay ('https://www.google.fr/')">
+                        <label for="three" class="radio-switch__label">
+                            <span class="bouton boutonAfter2"><span class="bouton__text">Cas 2</span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="js/functions.js"></script>
 
 </html>
