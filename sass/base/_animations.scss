@@ -1,0 +1,35 @@
+//ANIMATION RADIO WORM
+/*Animation traîne du serpent*/
+@for $s from 2 through 30 {
+	$delay: $wormDur/100 * ($s - 1); 
+	.worm__segment:nth-child(#{$s}){
+		transition-delay: $delay;
+		&:before{
+			animation-delay: $delay;
+        }
+    }
+}
+
+/*Animation globale*/
+@for $s from 1 through 3 {
+
+    //Animation du point de départ   
+	input:nth-of-type(#{$s}):checked ~ .worm .worm__segment{
+		@if $s > 1{
+            transform: translateX(3em * ($s - 1)); 
+        }
+		&:before{
+            animation-name: hop#{$s};
+        }
+    }
+
+    //Animation de la courbe
+	@keyframes hop#{$s}{ 
+		from, to {
+            transform: translateY(0);
+        }
+		50% {
+			transform: translateY(-1.5em);
+        }
+    }
+}    

@@ -1,0 +1,59 @@
+.worm__content { 
+    display: block;
+    max-width: 20rem;  
+    position: relative;
+    margin-left: 4rem;
+}
+
+.rond{  
+    position: absolute;
+    display: inline-block;       
+    border: 1px solid $color-grey-light;   
+    width: 3rem;
+    height: 3rem; 
+    border-radius: 50%; 
+
+    &--1{ 
+        top: -0.75rem; 
+        left: -0.75rem; 
+    }
+
+    &--2{
+        top: -0.75rem;
+        left: 2.25rem;  
+    }
+
+    &--3{
+        top: -0.75rem;  
+        left: 5.25rem; 
+    }
+}
+
+.worm, .worm__segment {
+    position: absolute;
+}
+
+.worm__segment {
+    top: 0;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;    
+    transition: transform 0.4s cubic-bezier(0.45, 0.05, 0.55, 0.95);  
+
+    &::before {
+        animation-duration: 0.4s;
+        animation-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+        background: currentColor;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        }
+}
+
+.worm__segment:before {
+    border-radius: 50%;
+    color: $color-primary;  
+}
+
+
